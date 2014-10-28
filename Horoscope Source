@@ -31,7 +31,6 @@ public class Horoscope {
 			
 			String symbol = ("");
 			//tests month and day values to approximate symbol
-			
 			//Aries     cond 1 tests March 21-31     cond 2 tests April 1-20
 			if( (month.equals("March") || month.equals("march")) && ((dayInt >= 21) && (dayInt <= 31)) || 
 			    (month.equals("April") || month.equals("april")) && ((dayInt >= 1) && (dayInt <= 20))  )
