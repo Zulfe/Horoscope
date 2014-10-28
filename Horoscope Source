@@ -1,0 +1,37 @@
+package APCS;
+
+import javax.swing.JOptionPane;
+
+public class Horoscope {
+	public static void infoCollect(){
+		boolean userInputValid = false;
+		while(!userInputValid){
+			String months[] = {"January", "january", "February", "february", "March",
+							   "march", "April", "april", "May", "may", "June", "june", "July",
+							    "july", "August", "august", "September", "september", "October",
+							   "october", "November", "november", "December", "december"};
+			String month = JOptionPane.showInputDialog("What month were you born in?");
+			
+			 for(int i = 0; i <= 23; i++){
+				System.out.println(i);
+				if((month.equals(months[i]))){
+					System.out.println("Move on.");
+				}
+				else{
+					System.out.println("Do not move on.");
+				}
+					
+			}
+			String day = JOptionPane.showInputDialog("What day were you born on?");
+			
+		}
+	}
+	
+	
+	
+	public static void main(String [] args){
+		Horoscope.infoCollect();
+	}
+}
+
+
