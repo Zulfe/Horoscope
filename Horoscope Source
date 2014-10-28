@@ -1,4 +1,3 @@
-package APCS;
 
 import javax.swing.JOptionPane;
 
@@ -9,29 +8,100 @@ public class Horoscope {
 			String months[] = {"January", "january", "February", "february", "March",
 							   "march", "April", "april", "May", "may", "June", "june", "July",
 							    "july", "August", "august", "September", "september", "October",
-							   "october", "November", "november", "December", "december"};
+							   "october", "November", "november", "December", "december", ""};
 			String month = JOptionPane.showInputDialog("What month were you born in?");
-			
-			 for(int i = 0; i <= 23; i++){
+			 
+			for(int i = 0; i <= 24; i++){
 				System.out.println(i);
 				if((month.equals(months[i]))){
-					System.out.println("Move on.");
+					break;
 				}
-				else{
-					System.out.println("Do not move on.");
+				else if (i == 24){
+					JOptionPane.showMessageDialog(null, "Error: Invalid month.");
+					System.exit(0);
 				}
 					
 			}
 			String day = JOptionPane.showInputDialog("What day were you born on?");
+			int dayInt = Integer.parseInt(day);
+			if(!(dayInt > 0 && 31 > dayInt)){
+				JOptionPane.showMessageDialog(null, "Error: Number out of range (1-31)");
+				System.exit(0);
+			}
 			
-		}
+			String symbol = ("");
+			//tests month and day values to approximate symbol
+			
+			//Aries     cond 1 tests March 21-31     cond 2 tests April 1-20
+			if( (month.equals("March") || month.equals("march")) && ((dayInt >= 21) && (dayInt <= 31)) || 
+			    (month.equals("April") || month.equals("april")) && ((dayInt >= 1) && (dayInt <= 20))  )
+				symbol = "Aries";
+			
+			//Taurus     cond 1 tests April 21-30     cond 2 tests May 1-21
+			if( (month.equals("April") || month.equals("april")) && ((dayInt >= 21) && (dayInt <= 30)) || 
+			    (month.equals("May") || month.equals("may")) && ((dayInt >= 1) && (dayInt <= 21))  )
+				symbol = "Taurus";
+			
+			//Gemini     cond 1 tests May 22-31     cond 2 tests June 1-21
+			if( (month.equals("May") || month.equals("may")) && ((dayInt >= 22) && (dayInt <= 31)) || 
+			    (month.equals("June") || month.equals("june")) && ((dayInt >= 1) && (dayInt <= 21))  )
+				symbol = "Gemini";
+			
+			//Cancer     cond 1 tests June 22-30     cond 2 tests July 1-22
+			if( (month.equals("June") || month.equals("june")) && ((dayInt >= 22) && (dayInt <= 30)) || 
+			    (month.equals("July") || month.equals("july")) && ((dayInt >= 1) && (dayInt <= 22))  )
+				symbol = "Cancer";
+			
+			//Leo     cond 1 tests July 23-31     cond 2 tests August 1-22
+			if( (month.equals("July") || month.equals("july")) && ((dayInt >= 23) && (dayInt <= 31)) || 
+			    (month.equals("") || month.equals("")) && ((dayInt >= 1) && (dayInt <= 22))  )
+				symbol = "Leo";
+			
+			//Virgo     cond 1 tests August 23-31     cond 2 tests September 1-23
+			if( (month.equals("August") || month.equals("august")) && ((dayInt >= 23) && (dayInt <= 31)) || 
+			    (month.equals("September") || month.equals("september")) && ((dayInt >= 1) && (dayInt <= 23))  )
+				symbol = "Virgo";
+			
+			//Libra     cond 1 tests September 24-30     cond 2 tests October 1-23
+			if( (month.equals("September") || month.equals("september")) && ((dayInt >= 24) && (dayInt <= 30)) || 
+			    (month.equals("October") || month.equals("october")) && ((dayInt >= 1) && (dayInt <= 23))  )
+				symbol = "Libra";
+			
+			//Scorpio     cond 1 tests October 24-31     cond 2 tests November 1-22
+			if( (month.equals("October") || month.equals("october")) && ((dayInt >= 24) && (dayInt <= 31)) || 
+			    (month.equals("November") || month.equals("november")) && ((dayInt >= 1) && (dayInt <= 22))  )
+				symbol = "Scorpio";
+			
+			//Sagittarius     cond 1 tests November 23-30     cond 2 tests December 1-21
+			if( (month.equals("November") || month.equals("November")) && ((dayInt >= 23) && (dayInt <= 30)) || 
+			    (month.equals("December") || month.equals("december")) && ((dayInt >= 1) && (dayInt <= 22))  )
+				symbol = "Sagittarius";
+			
+			//Capricorn     cond 1 tests December 22-31     cond 2 tests January 1-20
+			if( (month.equals("December") || month.equals("december")) && ((dayInt >= 22) && (dayInt <= 31)) || 
+			    (month.equals("January") || month.equals("january")) && ((dayInt >= 1) && (dayInt <= 20))  )
+				symbol = "Capricorn";
+			
+			//Aquarius     cond 1 tests January 21-31     cond 2 tests February 1-18
+			if( (month.equals("January") || month.equals("january")) && ((dayInt >= 21) && (dayInt <= 31)) || 
+			    (month.equals("February") || month.equals("february")) && ((dayInt >= 1) && (dayInt <= 18))  )
+				symbol = "Acqurius";
+			
+			//Pisces     cond 1 tests February 19-28     cond 2 tests March 1-20
+			if( (month.equals("February") || month.equals("february")) && ((dayInt >= 19) && (dayInt <= 28)) || 
+			    (month.equals("March") || month.equals("march")) && ((dayInt >= 1) && (dayInt <= 20))  )
+				symbol = "Pisces";
+				
+			
+			JOptionPane.showMessageDialog(null, "Your symbol is: " + symbol + "\n" + "based on " + month + " " + dayInt);
+			}
+		
+			
 	}
-	
 	
 	
 	public static void main(String [] args){
 		Horoscope.infoCollect();
 	}
 }
-
 
