@@ -30,69 +30,135 @@ public class Horoscope {
 			}
 			
 			String symbol = ("");
+			String horoscope = ("");
 			//tests month and day values to approximate symbol
 			//Aries     cond 1 tests March 21-31     cond 2 tests April 1-20
 			if( (month.equals("March") || month.equals("march")) && ((dayInt >= 21) && (dayInt <= 31)) || 
-			    (month.equals("April") || month.equals("april")) && ((dayInt >= 1) && (dayInt <= 20))  )
+			    (month.equals("April") || month.equals("april")) && ((dayInt >= 1) && (dayInt <= 20))  ){
 				symbol = "Aries";
+				horoscope = "Emotions stemming from past experiences might cause you to assume undue " + "\n" +
+				"responsibilities, particularly concerning family members. This is fine as long as you " + "\n" +
+				"realize what you're doing is as much for you as for the other person. Whatever tasks " + "\n" +
+				"you assume may allow you to release old traumas and give form to your plans and ambitions. " + "\n" +
+				"And don't be surprised if those you help today go to bat for you later.";}
 			
 			//Taurus     cond 1 tests April 21-30     cond 2 tests May 1-21
 			if( (month.equals("April") || month.equals("april")) && ((dayInt >= 21) && (dayInt <= 30)) || 
-			    (month.equals("May") || month.equals("may")) && ((dayInt >= 1) && (dayInt <= 21))  )
+			    (month.equals("May") || month.equals("may")) && ((dayInt >= 1) && (dayInt <= 21))  ){
 				symbol = "Taurus";
+				horoscope = "Relatives or neighbors may come to you today asking for favors. Some may " + "\n" +
+				"know exactly what buttons to push in order to get you to do what they want. Don't be " + "\n" +
+				"sucked into guilt or other negative emotions. Help others if you wish, Taurus, but " + "\n" +
+				"recognize that you're doing it because you want to and not because you feel you have to. " + "\n" +
+				"You might even learn something about yourself in the process.";}
 			
 			//Gemini     cond 1 tests May 22-31     cond 2 tests June 1-21
 			if( (month.equals("May") || month.equals("may")) && ((dayInt >= 22) && (dayInt <= 31)) || 
-			    (month.equals("June") || month.equals("june")) && ((dayInt >= 1) && (dayInt <= 21))  )
+			    (month.equals("June") || month.equals("june")) && ((dayInt >= 1) && (dayInt <= 21))  ){
 				symbol = "Gemini";
+				horoscope = "A temporary lack of belief in your abilities might have you hesitating to " + "\n" +
+				"start a project or take on a task that you'd normally snap up. This could involve " + "\n" +
+				"something you've wanted to try or helping someone else. Your faith in yourself should " + "\n" +
+				"never flag, but if it does, it's important to remember that hard work can be as important " + "\n" +
+				"as talent - and you aren't afraid of that!";}
 			
 			//Cancer     cond 1 tests June 22-30     cond 2 tests July 1-22
 			if( (month.equals("June") || month.equals("june")) && ((dayInt >= 22) && (dayInt <= 30)) || 
-			    (month.equals("July") || month.equals("july")) && ((dayInt >= 1) && (dayInt <= 22))  )
+			    (month.equals("July") || month.equals("july")) && ((dayInt >= 1) && (dayInt <= 22))  ){
 				symbol = "Cancer";
-			
+				horoscope = "A phone conversation with someone who lives far away might have you feeling a " + "\n" +
+				"bit sad, reflecting on how much you miss that person. This can lead to pondering about your " + "\n" +
+				"life. You might question the direction you seem to be moving in, and consider other possible " + "\n" +
+				"options. You're likely to be cautious when it comes to making final decisions, Cancer. You will " + "\n" +
+				"consider every detail.";
+			}
+				
 			//Leo     cond 1 tests July 23-31     cond 2 tests August 1-22
 			if( (month.equals("July") || month.equals("july")) && ((dayInt >= 23) && (dayInt <= 31)) || 
-			    (month.equals("") || month.equals("")) && ((dayInt >= 1) && (dayInt <= 22))  )
+			    (month.equals("") || month.equals("")) && ((dayInt >= 1) && (dayInt <= 22))  ){
 				symbol = "Leo";
-			
+				horoscope = "Today you might be in a reflective and meditative mood. You may think about mundane " + "\n" +
+				"matters, such as how to increase your income, or more complex issues, such as the purpose of life. " + "\n" +
+				"You aren't likely to want to do much socializing today, Leo. It's probably the perfect day to stay in, " + "\n" +
+				"relax, and enjoy your own company. Reading could prove especially informative now.";
+			}
+				
 			//Virgo     cond 1 tests August 23-31     cond 2 tests September 1-23
 			if( (month.equals("August") || month.equals("august")) && ((dayInt >= 23) && (dayInt <= 31)) || 
-			    (month.equals("September") || month.equals("september")) && ((dayInt >= 1) && (dayInt <= 23))  )
+			    (month.equals("September") || month.equals("september")) && ((dayInt >= 1) && (dayInt <= 23))  ){
 				symbol = "Virgo";
-			
+				horoscope = "Obligations to friends and groups could interfere with time that you want to spend with " + "\n" +
+				"your partner. A number of visitors in your home might demand more of your time, energy, and attention, " + "\n" +
+				"and you might find this disconcerting. You're no one's servant, Virgo. You're entitled to enjoy " + "\n" +
+				"yourself. Save some time for your mate at the end of the day.";
+			}
+				
 			//Libra     cond 1 tests September 24-30     cond 2 tests October 1-23
 			if( (month.equals("September") || month.equals("september")) && ((dayInt >= 24) && (dayInt <= 30)) || 
-			    (month.equals("October") || month.equals("october")) && ((dayInt >= 1) && (dayInt <= 23))  )
+			    (month.equals("October") || month.equals("october")) && ((dayInt >= 1) && (dayInt <= 23))  ){
 				symbol = "Libra";
-			
+				horoscope = "You might wake up this morning and decide your home is a total wreck. The desire to " + "\n" +
+				"spend the day cleaning and sprucing up your house might prove almost obsessive. Do what you have to " + "\n" +
+				"do, but don't get so caught up that you forget about the big picture. Whatever you do today, Libra, " + "\n" +
+				"view it in its proper perspective. The world won't end if your house isn't flawlessly clean.";
+			}
+				
 			//Scorpio     cond 1 tests October 24-31     cond 2 tests November 1-22
 			if( (month.equals("October") || month.equals("october")) && ((dayInt >= 24) && (dayInt <= 31)) || 
-			    (month.equals("November") || month.equals("november")) && ((dayInt >= 1) && (dayInt <= 22))  )
+			    (month.equals("November") || month.equals("november")) && ((dayInt >= 1) && (dayInt <= 22))  ){
 				symbol = "Scorpio";
-			
+				horoscope = "Extra time and attention that you have been devoting to your career should pay off " + "\n"
+				+ "about now. You've worked hard to be where you are, and you aren't through climbing the ladder " + "\n"
+				+ "of success just yet. You aren't likely to rest on your laurels. Today you might spend a lot of " + "\n"
+				+ "time planning your next goal. A little ingenuity will definitely pay off here, Scorpio. Use " + "\n"
+				+ "whatever advantages you have.";
+			}
+				
 			//Sagittarius     cond 1 tests November 23-30     cond 2 tests December 1-21
 			if( (month.equals("November") || month.equals("November")) && ((dayInt >= 23) && (dayInt <= 30)) || 
-			    (month.equals("December") || month.equals("december")) && ((dayInt >= 1) && (dayInt <= 22))  )
+			    (month.equals("December") || month.equals("december")) && ((dayInt >= 1) && (dayInt <= 22))  ){
 				symbol = "Sagittarius";
-			
+				horoscope = "An older male visitor could come to your home, possibly to help you with some work" + "\n"
+						+ " that needs to be done. Family members may have abandoned you for the day to go out " + "\n"
+						+ "and do their own thing. You will welcome the company as well as the help. Practical " + "\n"
+						+ "matters, such as the household budget, might need attention, so set aside some time " + "\n"
+						+ "to work out the details.";
+			}
+				
 			//Capricorn     cond 1 tests December 22-31     cond 2 tests January 1-20
 			if( (month.equals("December") || month.equals("december")) && ((dayInt >= 22) && (dayInt <= 31)) || 
-			    (month.equals("January") || month.equals("january")) && ((dayInt >= 1) && (dayInt <= 20))  )
+			    (month.equals("January") || month.equals("january")) && ((dayInt >= 1) && (dayInt <= 20))  ){
 				symbol = "Capricorn";
-			
+				horoscope = "Today you might perform some service to people who live in your neighborhood. " + "\n"
+						+ "Perhaps you will chauffeur people around to do their shopping. Perhaps you will " + "\n"
+						+ "help people with household tasks. Pets may also need some attention. Whatever it" + "\n"
+						+ " is, you will enjoy it, and be appreciated as well. Expect to have a very busy day." + "\n"
+						+ " You will certainly sleep soundly tonight.";
+			}
+				
 			//Aquarius     cond 1 tests January 21-31     cond 2 tests February 1-18
 			if( (month.equals("January") || month.equals("january")) && ((dayInt >= 21) && (dayInt <= 31)) || 
-			    (month.equals("February") || month.equals("february")) && ((dayInt >= 1) && (dayInt <= 18))  )
+			    (month.equals("February") || month.equals("february")) && ((dayInt >= 1) && (dayInt <= 18))  ){
 				symbol = "Acqurius";
+				horoscope = "Meticulous and sincere effort on your part may have led to a recent increase in" + "\n"
+						+ " income. Today you might be thinking of reworking your budget. While others might " + "\n"
+						+ "throw caution to the wind at a time like this, today you might go too far in the" + "\n"
+						+ " opposite direction. Be careful and realistic, Aquarius, but don't be overly frugal." + "\n"
+						+ " You've worked hard to get where you are and you deserve a reward.";}
 			
 			//Pisces     cond 1 tests February 19-28     cond 2 tests March 1-20
 			if( (month.equals("February") || month.equals("february")) && ((dayInt >= 19) && (dayInt <= 28)) || 
-			    (month.equals("March") || month.equals("march")) && ((dayInt >= 1) && (dayInt <= 20))  )
+			    (month.equals("March") || month.equals("march")) && ((dayInt >= 1) && (dayInt <= 20))  ){
 				symbol = "Pisces";
-				
+				horoscope = "A sense of duty toward family members, children, and your sweetheart may cause " + "\n"
+						+ "you to take on responsibilities today that you wouldn't normally assume. Sincere " + "\n"
+						+ "efforts on behalf of those you care about are likely to bring the results you want" + "\n"
+						+ ". It won't just make you happy but will also please those you are helping. This not" + "\n"
+						+ " only makes you feel appreciated, it will also boost your physical strength.";
+			}
 			
 			JOptionPane.showMessageDialog(null, "Your symbol is: " + symbol + "\n" + "based on " + month + " " + dayInt);
+			JOptionPane.showMessageDialog(null, "Your horoscope is: \n" + horoscope);
 			}
 		
 			
